@@ -7,6 +7,9 @@ from tensorflow.keras import layers
 from dcgru_cell_tf2 import *
 from submodules import *
 from MATURE import *
+from mymodels_DCGRU import * # MyDCGRUSTE0ZCF, MyDCGRUSTE0ZC, MyDCGRUSTE0ZF
+from mymodels_GMAN import * # MyGM0ZCF, MyGM0ZC, MyGM0ZF
+from mymodels_ASTGCN import *
 
 def row_normalize(an_array):
     sum_of_rows = an_array.sum(axis=1)
@@ -210,6 +213,3 @@ class MyGMDCGRU(tf.keras.layers.Layer):
 
 
 ########################
-
-from mymodels_DCGRU import * # MyDCGRUSTE0ZCF, MyDCGRUSTE0ZC, MyDCGRUSTE0ZF
-from mymodels_GMAN import * # MyGM0ZCF, MyGM0ZC, MyGM0ZF

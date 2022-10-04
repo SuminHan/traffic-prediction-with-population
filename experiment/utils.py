@@ -374,7 +374,7 @@ def loadVolumeData3(args):
     valZF, _ = seq2instance(val, args.P, args.Q)
     testZF, _ = seq2instance(test, args.P, args.Q)
     # normalization 
-    maxvalZF = np.max(train); extdata['maxvalZF'] = maxvalZF
+    maxvalZF = np.max(train, 0); extdata['maxvalZF'] = maxvalZF
     trainZF = trainZF / maxvalZF
     valZF = valZF / maxvalZF
     testZF = testZF / maxvalZF
@@ -398,6 +398,9 @@ def loadVolumeData3(args):
     valTE = np.concatenate(valTE, axis = 1).astype(np.int32)
     testTE = seq2instance(test, args.P, args.Q)
     testTE = np.concatenate(testTE, axis = 1).astype(np.int32)
+
+
+    extdata['adj_mat'] = row_normalize(np.eye(num_sensors) + 0.01)
 
 
     return (trainX, trainZC, trainZF, trainTE, trainY, 

@@ -1,0 +1,11 @@
+(MainThread) reading process list
+(blocking_0) wait_for_task starting
+(blocking_1) wait_for_task starting
+(blocking_2) wait_for_task starting
+(blocking_3) wait_for_task starting
+(blocking_2) (0/3) CUDA_VISIBLE_DEVICES=2 python trainmodel_v2.py --model_name=MyDCGRUSTE0ZCFSAB --memo=T0
+(blocking_1) (1/2) CUDA_VISIBLE_DEVICES=1 python trainmodel_v2.py --model_name=MyDCGRUSTE0ZCFSAB --memo=T1
+(blocking_3) (2/1) CUDA_VISIBLE_DEVICES=3 python trainmodel_v2.py --model_name=MyDCGRUSTE0ZCFSAB --memo=T2
+(blocking_1) (finished) CUDA_VISIBLE_DEVICES=1 python trainmodel_v2.py --model_name=MyDCGRUSTE0ZCFSAB --memo=T1
+(blocking_3) (finished) CUDA_VISIBLE_DEVICES=3 python trainmodel_v2.py --model_name=MyDCGRUSTE0ZCFSAB --memo=T2
+(blocking_2) (finished) CUDA_VISIBLE_DEVICES=2 python trainmodel_v2.py --model_name=MyDCGRUSTE0ZCFSAB --memo=T0
